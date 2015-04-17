@@ -1,0 +1,28 @@
+<h3>Edit</h3>
+
+
+Edit comment
+
+<%= form_for @comment , url: comment_path, method: :PATCH  do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+ <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit :enviar%>
+  </p>
+<% end %>
+
+
+<h3> <%= link_to "Cancelar", comments_path%>  </h3>

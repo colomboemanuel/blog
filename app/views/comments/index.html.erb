@@ -1,0 +1,19 @@
+<h1>index</h1>
+
+<%  @comments.each do |f|%>  
+<ul>
+<li> <strong> Number: <%=  f.id%> </strong> <small> Date: <%=  f.created_at%> </small></li>  	
+<li> Name:<%=  f.name%>  </li>
+<li> Email: <%=  f.email%>  </li>
+<li> Description: <%=  f.description%>  </li>
+</ul>
+
+
+	<%= link_to 'Show', comment_path(f) %>
+	<%= link_to 'Edit', edit_comment_path(f) %>
+	<%= link_to 'Destroy', comment_path(f) , method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%  end %>  
+
+
+ <h3> <%=  link_to "Crear Comment", new_comment_path%>  </h3> 	
